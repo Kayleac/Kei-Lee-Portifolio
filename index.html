@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeiLee's desktop</title>
+    <link href="styles.css" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <audio id="audio-open" src="Audios/botao_abrir.mp3"></audio>
+        <audio id="audio-close" src="Audios/botao_fechar.mp3"></audio>
+        <audio id="background-music" loop>
+            <source src="Audios/background-music.mp3">
+        </audio>
+        <div class="controles">
+            <button id="music-button" class="button">
+                <img class="troca-tema" src="Imagens/play-button.png" data-light="Imagens/play-button.png" data-dark="Imagens/play-button-dark.png" height="36px" onclick="document.getElementById('audio-open').play()">
+            </button>
+            <button id="dark-mode-toggle" class="button">
+                <img id=icone-tema src="Imagens/moon.png" data-light="Imagens/moon.png" data-dark="Imagens/sun-dark.png" height="36px" onclick="document.getElementById('audio-open').play()">
+            </button>
+        </div>
+        <div class="modal-menu">
+            <div class="modal-header">
+                <div class="title">portifólio</div>
+            </div>
+            <figure class="logo-container">
+                <img class="troca-tema" src="Imagens/icone.png" data-light="Imagens/icone.png" data-dark="Imagens/icone-dark.png" height="200px">
+                <figcaption class="titulo">oi! eu sou a <b class="negrito-rosa">kei lee</b></figcaption>
+            </figure>
+
+            <div class="button-container">
+                <button data-modal-target="#modal-sobre" class="button" onclick="document.getElementById('audio-open').play()">
+                    <img class="troca-tema" src="Imagens/info.png" data-light="Imagens/info.png" data-dark="Imagens/info-dark.png" height="65">
+                    sobre mim
+                </button>
+
+                <button data-modal-target="#modal-projeto" class="button" onclick="document.getElementById('audio-open').play()">
+                    <img class="troca-tema" src="Imagens/business-briefcase.png" data-light="Imagens/business-briefcase.png" data-dark="Imagens/business-briefcase-dark.png" height="65">
+                    projetos
+                </button>
+                <button data-modal-target="#modal-contato" class="button" onclick="document.getElementById('audio-open').play()">
+                    <img class="troca-tema" src="Imagens/email-address.png" data-light="Imagens/email-address.png" data-dark="Imagens/email-dark.png" height="65">
+                    contato
+                </button>
+
+                <button data-modal-target="#modal-faculdade" class="button" onclick="document.getElementById('audio-open').play()">
+                    <img class="troca-tema" src="Imagens/graduate.png" data-light="Imagens/graduate.png" data-dark="Imagens/graduate-dark.png" height="65">
+                    faculdade
+                </button>
+            </div>
+
+            <div class="modal" id="modal-sobre">
+                <div class="modal-header">
+                    <div class="title">sobre mim</div>
+                    <button data-close-button class="close-button" onclick="document.getElementById('audio-close').play()">[x]</button>
+                </div>
+                <div class="modal-body">
+                    <div class="perfil-container">
+                        <img class="troca-tema" src="Imagens/foto-perfil.png" data-light="Imagens/foto-perfil.png" data-dark="Imagens/foto-perfil-dark.png" height="75px">
+                        <div class="perfil-texto">
+                            <b class="negrito-rosa touching">Kei Lee</b>    
+                            <p class="touching">Estudante de Sistemas de Informação na UFSC</p>
+                        </div>
+                    </div>
+
+                    <p><b>INTERESSES</b></p>
+                    <ul>
+                        <li>jogos de RPG</li>
+                        <li>moda</li>
+                        <li>ilustração</li>
+                        <li>música</li>
+                    </ul>
+                    <p><b>DEV</b></p>
+                    <ul>
+                        <li>python</li>
+                        <li>css</li>
+                        <li>html</li>
+                        <li>javascript</li>
+                    </ul>
+                    <p><b>IDIOMAS</b></p>
+                    <p class="touching">Fluência em <b class="negrito-rosa">Português (Brasil)</b> e <b class="negrito-rosa">Inglês</b>, atualmente</p>
+                    <p class="touching">no curso de <b class="negrito-rosa">Francês</b> 4, ofertado na UFSC</p>
+                </div>
+            </div>
+            
+            <div class="modal" id="modal-projeto">
+                <div class="modal-header">
+                    <div class="title">projetos</div>
+                    <button data-close-button class="close-button" onclick="document.getElementById('audio-close').play()">[x]</button>
+                </div>
+                <div class="modal-body">
+                    <p><b>PROJETOS</b></p>
+                    <ul>
+                        <li>Esse website!</li>
+                        <li>isso é tudo por agora :)</li>
+                    </ul>
+                    <a>veja mais no</a>
+                    <a href="https://github.com/Kayleac" target="_blank"><b class="negrito-rosa"><u>github</u></b></a>
+                </div>
+            </div>
+
+            <div class="modal" id="modal-contato">
+                <div class="modal-header">
+                    <div class="title">contato</div>
+                    <button data-close-button class="close-button" onclick="document.getElementById('audio-close').play()">[x]</button>
+                </div>
+                <div class="modal-body">
+                    <div class="link-container">
+                        <a class="link" href="https://github.com/Kayleac" target="_blank">
+                            <img class="troca-tema" src="Imagens/github-contato.png" data-light="Imagens/github-contato.png" data-dark="Imagens/github-contato-dark.png" height="70px">
+                            github
+                        </a>
+                        <a class="link" href="https://www.instagram.com/keilee.archive?igsh=MWRkYjhiZTcxajBheQ==" target="_blank">
+                            <img class="troca-tema" src="Imagens/instagram-contato.png" data-light="Imagens/instagram-contato.png" data-dark="Imagens/instagram-contato-dark.png" height="70px">
+                            instagram
+                        </a>
+                        <a class="link" href="https://www.linkedin.com/in/kayle-almeida-carneiro-068b5b37a" target="_blank">
+                            <img class="troca-tema" src="Imagens/linkedin-contato.png" data-light="Imagens/linkedin-contato.png" data-dark="Imagens/linkedin-contato-dark.png" height="70px">
+                            linkedin
+                        </a>
+                    </div>
+                    <div class="centralizar">
+                        <a>ou me mande um email</a>
+                        <a href="mailto:kayleacarneiro@gmail.com"><b class="negrito-rosa"><u>clicando aqui</u></b></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal" id="modal-faculdade">
+                <div class="modal-header">
+                    <div class="title">faculdade</div>
+                    <button data-close-button class="close-button" onclick="document.getElementById('audio-close').play()">[x]</button>
+                </div>
+                <div class="modal-body">
+                    <p><b>FASE 1</b></p>
+                    <ul>
+                        <li>Aspectos Comportamentais do Empreendedor</li>
+                        <li>Teoria Geral de Sistemas</li>
+                        <li>Programação Orientada a Objetos I</li>
+                        <li>Fundamentos Matemáticos da Informática</li>
+                        <li>Introdução à Informática</li>
+                    </ul>
+                    <p><b>FASE 2</b></p>
+                    <ul>
+                        <li>Administração I</li>
+                        <li>Marketing Pessoal e Empreendedorismo</li>
+                        <li>Desenvolvimento de Sistemas Orientados a Objetos I</li>
+                        <li>Probabilidade e Estatística</li>
+                        <li>Organização e Arquitetura de Computadores</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="icon-container">
+                <a href="https://www.instagram.com/keilee.archive?igsh=MWRkYjhiZTcxajBheQ==" target="_blank">
+                <img class="troca-tema" src="Imagens/instagram.png" data-light="Imagens/instagram.png" data-dark="Imagens/instagram-dark.png" height="36">
+                </a>
+                <a href="https://www.linkedin.com/in/kayle-almeida-carneiro-068b5b37a" target="_blank">
+                <img class="troca-tema" src="Imagens/linkedin.png" data-light="Imagens/linkedin.png" data-dark="Imagens/linkedin-dark.png" height="36">
+                </a>
+                <a href="https://github.com/Kayleac" target="_blank">
+                <img class="troca-tema" src="Imagens/github.png" data-light="Imagens/github.png" data-dark="Imagens/github-dark.png" height="36">
+                </a>
+            </div>
+        </div>
+        <div class="aviso-container" id="footer-aviso">
+            <div class="aviso">
+                <p>ei, você!</p>
+                <p style="font-size: 15px;">esse site é melhor experienciado no desktop, 
+                    algumas features podem ficar meio esquisitas em outros aparelhos.</p>
+            </div>
+            <button class="okay-button" id="btn-fechar-aviso" onclick="document.getElementById('audio-close').play()">okay</button>
+        </div>
+        <div class="copyright">
+            <p>© 2026 Kei Lee</p>
+        </div>
+    </body>
+</html> 
