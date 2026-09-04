@@ -47,6 +47,8 @@ body {
     z-index: 20;
     background-color: var(--bg-cor);
     color: var(--texto-cor);
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .modal-menu {
@@ -62,6 +64,10 @@ body {
     box-shadow: 4px 4px var(--texto-cor);
     color: var(--texto-cor);
     transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease;
+    max-height: 90vh;
+}
+.modal-menu::-webkit-scrollbar {
+    display: none;
 }
 
 .modal.active {
@@ -226,9 +232,25 @@ body {
 }
 
 @media (max-width: 600px) {
+
+    .controles .button img {
+        height: 24px !important; 
+    }
+
     .modal-menu {
-        width: 90%;
-        max-width: 400px;
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border: none;
+        box-shadow: none;
+        background-color: transparent;
+        padding: 20px 10px;
+        overflow-y: visible;
+    }
+    .modal-menu > .modal-header {
+        display: none;
     }
 
     .modal-header {
@@ -248,9 +270,9 @@ body {
     }
 
     .modal {
-        position: absolute;
+        position: fixed;
         top: 50%;
-        left:50%;
+        left: 50%;
         transform: translate(-50%, -50%) scale(0);
         width: max-content;
         max-width: 90%;
@@ -261,9 +283,6 @@ body {
         border-radius: 20px;
         z-index: 20;
         background-color: var(--bg-cor);
-        &::-webkit-scrollbar {
-            display: none;
-        }
     }
 
     .modal.active {
